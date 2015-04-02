@@ -1,0 +1,93 @@
+extends layout
+
+block content
+    
+  h1 Basic Node Example
+  .wrapper
+      #tabs
+        ul
+          li
+            a(href='#tabs-1') Add Users Info
+          |       
+          li
+            a(href='#tabs-2') View Users
+        |     
+        #tabs-1
+          h1 Add Users Info
+          |       
+          .field-container
+          form(method='post',id='basic-form',action='/add_user')
+            .field-row
+             
+              fieldset
+                label First Name
+                |           
+                input(type='text', placeholder='Enter First Name' , name='fname', required)
+                | 
+                input(type='text', placeholder='Enter Last Name' , name='lname')
+              | 
+              fieldset
+                label Email
+                |           
+                input(type='text', placeholder='Enter Email' , name='email',required)
+              |           
+              fieldset
+                label Gender
+                |           Male 
+                input(type='radio', value='Male', name='gender', required)
+                |           Female 
+                input(type='radio', value='Female', name='gender')
+              |          
+              fieldset
+                label City
+                |           
+                input(type='text', placeholder='Enter City' , name='city')
+              |     
+              fieldset
+                label Company
+                |           
+                input(type='text', placeholder='Enter Company' , name='company')
+              |           
+            |   
+            
+            input(type='submit', value='Submit' , id='btnsubmit')
+            .clear
+        |     
+        #tabs-2
+          h1 View Customers
+          |       
+          table#grid-basic.table.table-condensed.table-hover.table-striped
+            thead
+              tr
+                th Name
+                |             
+                th Email
+                |             
+                th Gender
+                |             
+                th City
+                |             
+                th Company
+                |             
+                th Change information
+                |             
+                th Delete Customer
+            |         
+            tbody
+              each val in users['users']
+               tr
+                td= val.name.firstName + " " + val.name.lastName
+                |             
+                td= val.email
+                |             
+                td= val.gender
+                |             
+                td= val.city
+                |             
+                td= val.company
+                |             
+                td 
+                 a(href='editmember?id=' + val.id) Edit
+                |             
+                td 
+                 a(href='deletemember?id=' + val.id) Delete

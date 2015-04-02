@@ -1,0 +1,26 @@
+{
+    "users": [
+        {
+            "id": 1,
+            "name": {
+                "firstName": "Raghavendra",
+                "lastName": "Nayak"
+            },
+            "email": "ragu556@gmail.com",
+            "gender": "Male",
+            "city": "Dombivli213",
+            "company": ""
+        },
+        {
+            "id": 2,
+            "name": {
+                "firstName": "Raghavendra",
+                "lastName": "Nayak"
+            },
+            "email": "ragu556@gmail.com",
+            "gender": "Male",
+            "city": "sdasd",
+            "company": "Etouch"
+        }
+    ]
+}

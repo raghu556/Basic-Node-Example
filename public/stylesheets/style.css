@@ -1,0 +1,14 @@
+@charset "utf-8";
+/* CSS Document */
+body,div,a,span,ul,li{margin: 0 ; padding: 0;}
+body{font-family:Arial, Helvetica, sans-serif;}
+.clear{clear: both}
+.wrapper{margin:0 auto; width: 960px;}
+.field-row{}
+fieldset{border: 0;margin-bottom: 20px;}
+h1{font-size: 30px; font-family: trebuchet; text-transform: uppercase; text-align: center; border-bottom: 1px solid #aaa;}
+.ui-widget fieldset label{font-size: 14px; width: 100px;display: inline-block;vertical-align: top;}
+.ui-widget fieldset input[type='text']{padding:5px; width: 200px; border: 1px solid #999999; height: 30px;font-size: 12px;}
+.ui-widget fieldset textarea{padding:5px; width: 200px; border: 1px solid #999999; height: 50px;font-size: 12px;}
+.btn-container{}
+.btn-container input[type='button']{display: block; margin: 15px auto;}

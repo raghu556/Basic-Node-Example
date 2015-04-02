@@ -1,0 +1,57 @@
+extends layout
+
+block content
+    
+  h1 Basic Node Example
+  .wrapper
+      #tabs
+        ul
+          li
+            a(href='#tabs-1') Edit Users Info
+        |     
+        #tabs-1
+          h1 Add Users Info
+          |       
+          .field-container
+          form(method='post',id='basic-form',action='/editmember')
+            .field-row
+              input(type='hidden', name='memid' , value= users.id)
+              fieldset
+                label First Name
+                |           
+                input(type='text', placeholder='Enter First Name' , name='fname' , value= users.name.firstName)
+                | 
+                input(type='text', placeholder='Enter Last Name' , name='lname' , value= users.name.lastName)
+              | 
+              fieldset
+                label Email
+                |           
+                input(type='text', placeholder='Enter Email' , name='email' , value= users.email)
+              |           
+              fieldset
+                label Gender
+                |           Male 
+                if users.gender == 'Male'
+                 input(type='radio', value='Male', name='gender', checked)
+                else
+                 input(type='radio', value='Male', name='gender')
+                |           Female 
+                if users.gender == 'Female' 
+                 input(type='radio', value='Female', name='gender' , checked)
+                else
+                 input(type='radio', value='Female', name='gender') 
+              |          
+              fieldset
+                label City
+                |           
+                input(type='text', placeholder='Enter City' , name='city' , value= users.city)
+              |     
+              fieldset
+                label Company
+                |           
+                input(type='text', placeholder='Enter Company' , name='company' , value= users.company)
+              |           
+            |   
+            
+            input(type='submit', value='Submit' , id='btnsubmit')
+            .clear
